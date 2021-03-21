@@ -6,10 +6,13 @@
 
 This project was developed during the fourth edition of the online event called [NextLeveLWeek](https://nextlevelweek.com) ministred by [RocketSeat](https://github.com/Rocketseat)
 
+## ⚡️ The Project
+  The Moveit project was designed to make people how work in the computer to 
+
 ## 🖥️ Used Tecnologies
- - ReactJs
- - NextJs
- - Styled-Components
+ - [ReactJs](https://reactjs.org/)
+ - [NextJs](https://nextjs.org/)
+ - [Styled-Components](https://styled-components.com/)
 
 ## Getting Started
 
