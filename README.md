@@ -14,7 +14,16 @@ This project was developed during the fourth edition of the online event called 
  - [NextJs](https://nextjs.org/)
  - [Styled-Components](https://styled-components.com/)
 
+## ⚙️ Dependencies
+ - [Yarn](https://yarnpkg.com/)
+ 
 ## Getting Started
+
+First, clone this repository: 
+
+```bash
+
+```
 
 First, run the development server:
 
