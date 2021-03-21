@@ -17,7 +17,7 @@ This project was developed during the fourth edition of the online event called 
 ## ⚙️ Dependencies
  - [Yarn](https://yarnpkg.com/)
  
-## Getting Started
+## 🚀️ Getting Started
 
 1. First, clone this repository: 
 
