@@ -2,12 +2,17 @@
   <img src="public/logo-full.svg"/> 
 </p>
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<img src="repo/nlw4.gif" /> 
 
-## - 🖥️ Used Tecnologies
- - ReactJs
- - NextJs
- - Styled-Components
+This project was developed during the fourth edition of the online event called [NextLeveLWeek](https://nextlevelweek.com) ministred by [RocketSeat](https://github.com/Rocketseat)
+
+## ⚡️ The Project
+  The Moveit project was designed to make people how work in the computer to 
+
+## 🖥️ Used Tecnologies
+ - [ReactJs](https://reactjs.org/)
+ - [NextJs](https://nextjs.org/)
+ - [Styled-Components](https://styled-components.com/)
 
 ## Getting Started
 
