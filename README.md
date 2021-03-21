@@ -6,7 +6,7 @@
 
 This project was developed during the fourth edition of the online event called [NextLeveLWeek](https://nextlevelweek.com) ministred by [RocketSeat](https://github.com/Rocketseat)
 
-## - 🖥️ Used Tecnologies
+## 🖥️ Used Tecnologies
  - ReactJs
  - NextJs
  - Styled-Components
