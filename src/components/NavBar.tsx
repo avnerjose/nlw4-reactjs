@@ -28,13 +28,17 @@ function NavLink(props: NavLinkProps) {
       {isActive ? (
         <LateralActiveLink>
           <Link href={props.href}>
+            <div className="link">
             <img src={`icons/${props.icon}.svg`} alt="" />
+            </div>
           </Link>
         </LateralActiveLink>
       ) : (
         <LateralLink>
           <Link href={props.href}>
-            <img src={`icons/${props.icon}-grey.svg`} alt="" />
+            <div className="link">
+              <img src={`icons/${props.icon}-grey.svg`} alt="" />
+            </div>
           </Link>
         </LateralLink>
       )}
@@ -52,7 +56,7 @@ export default function NavBar() {
       />
       <ul>
         <NavLink href="/" icon="home" />
-        <NavLink href="/teste" icon="award" />
+        <NavLink href="/leaderboard" icon="award" />
       </ul>
     </Container>
   );
@@ -84,6 +88,14 @@ const LateralLink = styled.li`
   justify-content: center;
   margin-bottom: 0.5rem;
   position: relative;
+
+  .link{  
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const LateralActiveLink = styled(LateralLink)`
