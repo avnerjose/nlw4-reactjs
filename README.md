@@ -22,7 +22,7 @@ This project was developed during the fourth edition of the online event called 
 1. First, clone this repository: 
 
 ```bash
-git clone https://github.com/avnerjose/nlw4-reactjs-moveit.git
+git clone https://github.com/avnerjose/reactjs-nextjs-moveit.git
 ```
 
 2. Second,go to the folder you cloned the repository and run the development server:
