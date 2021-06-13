@@ -1,7 +1,8 @@
+import { NextApiRequest, NextApiResponse } from "next";
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
 
-export default (req, res) =>
+export default (req: NextApiRequest, res: NextApiResponse) =>
   NextAuth(req, res, {
     providers: [
       Providers.GitHub({
