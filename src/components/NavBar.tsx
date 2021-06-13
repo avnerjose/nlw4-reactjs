@@ -1,43 +1,35 @@
 import Link from "next/link";
-import styled from "styled-components";
-import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { useMediaQuery } from "react-responsive";
+import {
+  Container,
+  LateralLink,
+  LateralActiveLink,
+  Logo,
+} from "../styles/components/NabBar";
 
 interface NavLinkProps {
   href: string;
   icon: string;
+  active: boolean;
 }
-function NavLink(props: NavLinkProps) {
-  const [isActive, setIsActive] = useState(false);
-  const router = useRouter();
 
-  function CheckActiveLink() {
-    if (router.pathname === props.href) {
-      setIsActive(true);
-    } else {
-      setIsActive(false);
-    }
-  }
-
-  useEffect(() => {
-    CheckActiveLink();
-  }, [isActive]);
-
+function NavLink({ active, icon, href }: NavLinkProps) {
   return (
     <>
-      {isActive ? (
+      {active ? (
         <LateralActiveLink>
-          <Link href={props.href}>
+          <Link href={href}>
             <div className="link">
-            <img src={`icons/${props.icon}.svg`} alt="" />
+              <img src={`icons/${icon}.svg`} alt="" />
             </div>
           </Link>
         </LateralActiveLink>
       ) : (
         <LateralLink>
-          <Link href={props.href}>
+          <Link href={href}>
             <div className="link">
-              <img src={`icons/${props.icon}-grey.svg`} alt="" />
+              <img src={`icons/${icon}-grey.svg`} alt="" />
             </div>
           </Link>
         </LateralLink>
@@ -46,68 +38,20 @@ function NavLink(props: NavLinkProps) {
   );
 }
 
-export default function NavBar() {
+export function NavBar() {
+  const router = useRouter();
+  const isMobile = useMediaQuery({ query: "(max-width: 720px)" });
   return (
     <Container>
-      <img
-        style={{ position: "absolute", top: "2rem" }}
-        src="icons/logo.svg"
-        alt=""
-      />
+      {!isMobile && <Logo src="icons/logo.svg" alt="Logo" />}
       <ul>
-        <NavLink href="/" icon="home" />
-        <NavLink href="/leaderboard" icon="award" />
+        <NavLink href="/" icon="home" active={router.pathname === "/"} />
+        <NavLink
+          href="/leaderboard"
+          icon="award"
+          active={router.pathname === "/leaderboard"}
+        />
       </ul>
     </Container>
   );
 }
-
-const Container = styled.nav`
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  padding: 2rem 0;
-
-  ul {
-    list-style-type: none;
-  }
-`;
-
-const LateralLink = styled.li`
-  height: 3.5rem;
-  width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.5rem;
-  position: relative;
-
-  .link{  
-    width: 100%;
-    height: 100%; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-`;
-
-const LateralActiveLink = styled(LateralLink)`
-  ::before {
-    content: "";
-    background: var(--blue);
-    border-radius: 0 5px 5px 0;
-    width: 4px;
-    height: 3.5rem;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-`;

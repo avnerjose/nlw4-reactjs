@@ -1,4 +1,4 @@
-import { Container } from "../styles/components/LeaderBoardItemStyles";
+import { Container } from "../styles/components/LeaderBoardItem";
 
 interface LeaderBoardItemProps {
   id: number;
@@ -18,25 +18,27 @@ export default function LeaderBoardItem({
 }: LeaderBoardItemProps) {
   return (
     <Container>
-      <div className="position">{id}</div>
-      <div className="userInfo">
-        <img src={picture} className="Avatar" />
+      <td>{id}</td>
+      <td className="userInfo">
+        <img src={picture} className="avatar" />
         <div>
           <h4>{name}</h4>
           <p>
-            <img src="icons/level.svg" alt="" />
+            <img src="icons/level.svg" alt="level" />
             Level {level}
           </p>
         </div>
-      </div>
-      <div>
+      </td>
+      <td>
         <p>
-          <span className="blueText">{completed}</span> completados
+          <span>{completed}</span> completados
         </p>
+      </td>
+      <td>
         <p>
-          <span className="blueText">{xp}</span> xp
+          <span>{xp}</span> xp
         </p>
-      </div>
+      </td>
     </Container>
   );
 }

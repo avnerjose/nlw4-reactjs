@@ -1,23 +1,39 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { useSession } from "next-auth/client";
 import { ChallengesContext } from "../contexts/ChallengesContext";
-import { Container } from "../styles/components/ProfileStyles";
+import { Container } from "../styles/components/Profile";
+import { ProfileDetailModal } from "./ProfileDetailModal";
 
 export function Profile() {
-  const { level } = useContext(ChallengesContext);
-
+  const [modalOpen, setModalOpen] = useState(false);
+  const { level, challengesCompleted, currentExperience } =
+    useContext(ChallengesContext);
+  const [session] = useSession();
   return (
     <Container>
       <img
-        src="https://avatars.githubusercontent.com/u/49520658?s=400&u=1da9b89af158225a9abbf27b509686bccab64e1f&v=4"
+        onClick={() => setModalOpen(true)}
+        src={session.user.image}
         alt="Imagem de Perfil"
       />
       <div>
-        <strong>Avner José</strong>
+        <strong>{session.user.name}</strong>
         <p>
           <img src="icons/level.svg" alt="Level" />
           Level {level}
         </p>
       </div>
+      {modalOpen && (
+        <ProfileDetailModal
+          setModalOpen={setModalOpen}
+          user={{
+            ...session.user,
+            currentExperience,
+            challengesCompleted,
+            level,
+          }}
+        />
+      )}
     </Container>
   );
 }

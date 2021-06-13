@@ -4,7 +4,7 @@ import {
   Container,
   CountdownButton,
   CountdownButtonActive,
-} from "../styles/components/CountdownStyles";
+} from "../styles/components/Countdown";
 
 export function Countdown() {
   const {
