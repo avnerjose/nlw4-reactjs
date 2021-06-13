@@ -12,7 +12,7 @@
     "name": "João Pedro",
     "picture": "/icons/user.png",
     "level": 35,
-    "completed": 10,
+    "completed": 109,
     "xp": 15200
   },
   {
@@ -20,7 +20,7 @@
     "name": "Gabriel Faria",
     "picture": "/icons/user.png",
     "level": 30,
-    "completed": 10,
+    "completed": 75,
     "xp": 14350
   },
   {
@@ -28,7 +28,7 @@
     "name": "Pedro Paulo",
     "picture": "/icons/user.png",
     "level": 28,
-    "completed": 10,
+    "completed": 60,
     "xp": 13140
   },
   {
@@ -36,7 +36,7 @@
     "name": "Márcia Santos",
     "picture": "/icons/user.png",
     "level": 27,
-    "completed": 10,
+    "completed": 54,
     "xp": 12120
   }
 ]
