@@ -58,12 +58,12 @@ export function ChallengesProvider({
     Cookies.set("challengesCompleted", String(challengesCompleted));
   }, [level, currentExperience, challengesCompleted]);
 
-  function levelUp() {
+  const levelUp = () => {
     setLevel(level + 1);
     setIsLevelModalOpen(true);
-  }
+  };
 
-  function startNewChallenge() {
+  const startNewChallenge = () => {
     const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
     const challenge = challenges[randomChallengeIndex];
 
@@ -76,16 +76,17 @@ export function ChallengesProvider({
         body: `Valendo ${challenge.amount} xp!`,
       });
     }
-  }
+  };
 
-  function setModalClosed() {
+  const setModalClosed = () => {
     setIsLevelModalOpen(false);
-  }
-  function resetChallenge() {
-    setActiveChallenge(null);
-  }
+  };
 
-  function completeChallenge() {
+  const resetChallenge = () => {
+    setActiveChallenge(null);
+  };
+
+  const completeChallenge = () => {
     if (!activeChallenge) {
       return;
     }
@@ -102,7 +103,7 @@ export function ChallengesProvider({
     setCurrentExperience(finalExperience);
     setActiveChallenge(null);
     setChallengesCompleted(challengesCompleted + 1);
-  }
+  };
 
   return (
     <ChallengesContext.Provider

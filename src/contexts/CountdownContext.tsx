@@ -34,16 +34,16 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
 
-  function startCountdown() {
+  const startCountdown = () => {
     setIsActive(true);
-  }
+  };
 
-  function resetCountdown() {
+  const resetCountdown = () => {
     clearTimeout(countdownTimeout);
     setIsActive(false);
     setHasFinished(false);
-    setTime(25 * 60);
-  }
+    setTime(1 * 60);
+  };
 
   useEffect(() => {
     if (isActive && time > 0) {
