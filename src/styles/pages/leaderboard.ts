@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  overflow-y: auto;
+  overflow-y: scroll;
+
+  @media(max-width: 720px){
+    overflow-y: inherit;
+  }
 `;
 
 export const Content = styled.div`

@@ -1,0 +1,164 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Avner José",
+      "picture": "https://avatars.githubusercontent.com/u/49520658?s=400&u=1da9b89af158225a9abbf27b509686bccab64e1f&v=4",
+      "level": 40,
+      "completed": 127,
+      "xp": 17400
+    },
+    {
+      "id": 2,
+      "name": "João Pedro",
+      "picture": "/icons/user.png",
+      "level": 35,
+      "completed": 109,
+      "xp": 15200
+    },
+    {
+      "id": 3,
+      "name": "Gabriel Faria",
+      "picture": "/icons/user.png",
+      "level": 30,
+      "completed": 75,
+      "xp": 14350
+    },
+    {
+      "id": 4,
+      "name": "Pedro Paulo",
+      "picture": "/icons/user.png",
+      "level": 28,
+      "completed": 60,
+      "xp": 13140
+    },
+    {
+      "id": 5,
+      "name": "Márcia Santos",
+      "picture": "/icons/user.png",
+      "level": 27,
+      "completed": 54,
+      "xp": 12120
+    },
+    {
+      "id": 6,
+      "name": "Rita",
+      "picture": "/icons/user.png",
+      "level": 23,
+      "completed": 54,
+      "xp": 12120
+    },
+    {
+      "id": 7,
+      "name": "João Pedro",
+      "picture": "/icons/user.png",
+      "level": 35,
+      "completed": 109,
+      "xp": 15200
+    },
+    {
+      "id": 8,
+      "name": "Gabriel Faria",
+      "picture": "/icons/user.png",
+      "level": 30,
+      "completed": 75,
+      "xp": 14350
+    },
+    {
+      "id": 9,
+      "name": "Pedro Paulo",
+      "picture": "/icons/user.png",
+      "level": 28,
+      "completed": 60,
+      "xp": 13140
+    },
+    {
+      "id": 10,
+      "name": "Márcia Santos",
+      "picture": "/icons/user.png",
+      "level": 27,
+      "completed": 54,
+      "xp": 12120
+    },
+    {
+      "id": 11,
+      "name": "Rita",
+      "picture": "/icons/user.png",
+      "level": 23,
+      "completed": 54,
+      "xp": 12120
+    },
+    {
+      "id": 12,
+      "name": "Gabriel Faria",
+      "picture": "/icons/user.png",
+      "level": 30,
+      "completed": 75,
+      "xp": 14350
+    },
+    {
+      "id": 13,
+      "name": "Pedro Paulo",
+      "picture": "/icons/user.png",
+      "level": 28,
+      "completed": 60,
+      "xp": 13140
+    },
+    {
+      "id": 14,
+      "name": "Márcia Santos",
+      "picture": "/icons/user.png",
+      "level": 27,
+      "completed": 54,
+      "xp": 12120
+    },
+    {
+      "id": 15,
+      "name": "Rita",
+      "picture": "/icons/user.png",
+      "level": 23,
+      "completed": 54,
+      "xp": 12120
+    },
+    {
+      "id": 16,
+      "name": "João Pedro",
+      "picture": "/icons/user.png",
+      "level": 35,
+      "completed": 109,
+      "xp": 15200
+    },
+    {
+      "id": 17,
+      "name": "Gabriel Faria",
+      "picture": "/icons/user.png",
+      "level": 30,
+      "completed": 75,
+      "xp": 14350
+    },
+    {
+      "id": 18,
+      "name": "Pedro Paulo",
+      "picture": "/icons/user.png",
+      "level": 28,
+      "completed": 60,
+      "xp": 13140
+    },
+    {
+      "id": 19,
+      "name": "Márcia Santos",
+      "picture": "/icons/user.png",
+      "level": 27,
+      "completed": 54,
+      "xp": 12120
+    },
+    {
+      "id": 20,
+      "name": "Rita",
+      "picture": "/icons/user.png",
+      "level": 23,
+      "completed": 54,
+      "xp": 12120
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { getSession, signIn } from "next-auth/client";
 import { Container } from "../styles/pages/login";
+import { GetServerSideProps } from "next";
 
 export default function LoginPage() {
   const session = getSession();
@@ -36,3 +37,20 @@ export default function LoginPage() {
     </Container>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const session = await getSession(ctx);
+
+  if (session) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
+};
