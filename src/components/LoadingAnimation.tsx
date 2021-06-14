@@ -1,16 +1,7 @@
-import Lottie from "react-lottie";
+import Lottie from "react-lottie-player";
 import animation from "../../public/loadingAnimation.json";
 import Head from "next/head";
 import { Container } from "../styles/components/LoadingAnimation";
-
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: animation,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
 
 export function LoadingAnimation() {
   return (
@@ -18,7 +9,12 @@ export function LoadingAnimation() {
       <Head>
         <title>Loading | MoveIt</title>
       </Head>
-      <Lottie options={defaultOptions} height={200} width={200} />
+      <Lottie
+        loop
+        animationData={animation}
+        play
+        style={{ width: 200, height: 200 }}
+      />
     </Container>
   );
 }
