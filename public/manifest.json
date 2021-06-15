@@ -1,0 +1,34 @@
+{
+  "name": "MoveIt by Avner José",
+  "short_name": "MoveIt",
+  "theme_color": "#5965e0",
+  "background_color": "#5965e0",
+  "display": "standalone",
+  "description": "NextJS application that ables people to use the pomodoro method and make exercises during the breaks",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "splash_pages": null,
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
