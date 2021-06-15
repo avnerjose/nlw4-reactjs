@@ -42,7 +42,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     clearTimeout(countdownTimeout);
     setIsActive(false);
     setHasFinished(false);
-    setTime(1 * 60);
+    setTime(0.5 * 60);
   };
 
   useEffect(() => {

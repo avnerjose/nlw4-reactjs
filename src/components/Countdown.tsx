@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CountdownContext } from "../contexts/CountdownContext";
 import {
+  ButtonProgress,
   Container,
   CountdownButton,
   CountdownButtonActive,
+  Progress,
 } from "../styles/components/Countdown";
 
 export function Countdown() {
@@ -18,6 +20,13 @@ export function Countdown() {
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, "0").split("");
   const [secondLeft, secondRight] = String(seconds).padStart(2, "0").split("");
+  const [progress, setProgress] = useState(0);
+  const time = minutes * 60 + seconds;
+
+  useEffect(() => {
+    const percent = ((0.5 * 60 - time) * 100) / (0.5 * 60);
+    setProgress(percent);
+  }, [seconds]);
 
   return (
     <div>
@@ -34,12 +43,19 @@ export function Countdown() {
       </Container>
 
       {hasFinished ? (
-        <CountdownButton disabled>Ciclo encerrado</CountdownButton>
+        <CountdownButton disabled>
+          Ciclo encerrado
+          <img src="/icons/check.svg" />
+          <Progress progress={100} />
+        </CountdownButton>
       ) : (
         <>
           {isActive ? (
             <CountdownButtonActive type="button" onClick={resetCountdown}>
               Abandonar o ciclo
+              <ButtonProgress>
+                <Progress progress={progress} />
+              </ButtonProgress>
             </CountdownButtonActive>
           ) : (
             <CountdownButton type="button" onClick={startCountdown}>

@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ProgressProps {
+  progress: number;
+}
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -60,12 +64,18 @@ export const CountdownButton = styled.button`
     background: var(--white);
     color: var(--text);
     cursor: not-allowed;
+    position: relative;
+
+    img{
+      margin-left: 1rem;
+    }
   }
 `;
 
 export const CountdownButtonActive = styled(CountdownButton)`
   background: var(--white);
   color: var(--title);
+  position: relative;
 
   :not([disabled]):hover {
     background: var(--red);
@@ -73,8 +83,20 @@ export const CountdownButtonActive = styled(CountdownButton)`
   }
 `;
 
+export const Progress = styled.div`
+  position: absolute;
+  width: ${(p: ProgressProps) => `${p.progress}%`};
+  height: 4px;
+  background: var(--green);
+  bottom: 0;
+  left: 0;
+`;
 
-
-
-
-
+export const ButtonProgress = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: var(--gray-line);
+  bottom: 0;
+  left: 0;
+`;
